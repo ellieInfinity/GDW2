@@ -3,19 +3,27 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Pipe
+  - Standable
+  - Goomba
+  - Koopa
+  - PPlant
+  - Coin
+  - Powerup
+  - MarioFire
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Mario
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Pipe
+  - PPlant
+  - MarioFire
+  - Ground
+  - Powerup
   - 
   - 
   - 
