@@ -37,6 +37,11 @@ public class LevelStatus : MonoBehaviour
         levelCompleted = complete;
     }
 
+    public bool GetLevelComplete()
+    {
+        return levelCompleted;
+    }
+
     public void SetLevelFailed(bool failed)
     {
         levelFailed = failed;

@@ -42,9 +42,25 @@ public class LevelCompleteBox : MonoBehaviour
     {
         itemCollected = true;
 
-        FindObjectOfType<LevelStatus>().SetLevelComplete(true);
-
         FindObjectOfType<AudioManager>().Stop("Music");
         FindObjectOfType<AudioManager>().Play("LevelClear");
+
+        FindObjectOfType<ScoreCounter>().AddScore(FindObjectOfType<Timer>().GetTime() * 50);
+
+        FindObjectOfType<Timer>().SetTime(0);
+
+        StartCoroutine(Delay());
+    }
+
+    IEnumerator Delay()
+    {
+        yield return new WaitForSecondsRealtime (1.5f);
+
+        FindObjectOfType<LevelStatus>().SetLevelComplete(true);
+    }
+
+    public bool GetItemCollected()
+    {
+        return itemCollected;
     }
 }

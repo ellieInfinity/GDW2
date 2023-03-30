@@ -89,6 +89,15 @@ public class MarioController : MonoBehaviour
         {
             Shoot();
         }
+
+        if (FindObjectOfType<Timer>().GetTime() <= 0)
+        {
+            if (FindObjectOfType<LevelCompleteBox>().GetItemCollected() == false)
+            {
+                StartDeath();
+            }
+            
+        }
     }
 
     void FixedUpdate() 
