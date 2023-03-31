@@ -45,7 +45,7 @@ public class LevelCompleteBox : MonoBehaviour
         FindObjectOfType<AudioManager>().Stop("Music");
         FindObjectOfType<AudioManager>().Play("LevelClear");
 
-        FindObjectOfType<ScoreCounter>().AddScore(FindObjectOfType<Timer>().GetTime() * 50);
+        FindObjectOfType<ScoreCounter>().AddScore((FindObjectOfType<Timer>().GetTime()/300) * 50);
 
         FindObjectOfType<Timer>().SetTime(0);
 
